@@ -110,3 +110,5 @@ This is a lab prototype. The weather connections, sensor history, imagery dates,
 Frontend role checks demonstrate the SRS workflows and pass the local access-control cases. They do **not** secure a production multi-user system. Real deployment requires server authentication, authorization on every record/API, encrypted transport, consent and privacy governance, immutable audit records, trusted sensor timestamps and expert-validated agronomic models.
 
 Original PDF references remain unchanged. `reference-notes/` contains extracted text used during implementation.
+## Updates
+Added project documentation.
