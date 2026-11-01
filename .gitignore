@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+*.local
+.DS_Store
+reference-notes/asset-downloads.json
+
+# Keep original college submissions and extracted reference material local.
+/*.pdf
+/*.docx
+/reference-notes/
