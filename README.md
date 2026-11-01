@@ -2,6 +2,12 @@
 
 React frontend for **Irrigation Advisory System for Sugarcane Crop using AI and Sensor-based Technology**. Built from the supplied CaneFlow Figma file and the SRS, UML, project plan, black-box testing, and CI/CD experiments in this folder.
 
+- **Live website:** https://yavishtt.github.io/caneflow-ai/
+- **Repository:** https://github.com/yavishtt/caneflow-ai
+- **CI/CD runs:** https://github.com/yavishtt/caneflow-ai/actions
+
+Experiment 8 deployment was completed on 1 November 2026. See [the experiment implementation and evidence](docs/EXPERIMENT-8.md).
+
 ## Run locally
 
 Requires Node.js 24 LTS and npm.
@@ -81,7 +87,17 @@ The supplied experiment asks for automated integration checks, delivery of a val
 5. Upload the `dist` artifact for delivery.
 6. Deploy to GitHub Pages on `main` only, after the verify job passes. Pull requests never deploy.
 
-To activate it, put this project in a GitHub repository with default branch `main` and select **Settings → Pages → Source → GitHub Actions**. A push then runs the workflow. No repository or remote deployment was created by this local implementation. For manual production approval (continuous delivery), configure required reviewers on the `github-pages` environment. Without that gate, successful `main` builds deploy continuously.
+The project is deployed from the public `yavishtt/caneflow-ai` repository. **Settings → Pages → Source** is configured as **GitHub Actions**. Every push to `main` runs the workflow and publishes the validated build. For manual production approval (continuous delivery), configure required reviewers on the `github-pages` environment. Without that gate, successful `main` builds deploy continuously.
+
+For future updates, edit the project, then commit the intended source files and push:
+
+```sh
+git add src public index.html package.json package-lock.json
+git commit -m "Update CaneFlow website"
+git push
+```
+
+Check the Actions tab for the green run before refreshing the live website. Original college PDF/DOCX submissions and extracted reference notes are excluded from version control.
 
 The project uses a relative asset base and hash routing, so repository subpaths and refreshed dashboard links work with GitHub Pages. Configuration follows [GitHub Pages custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and [Vite deployment guidance](https://vite.dev/guide/static-deploy.html#github-pages).
 
